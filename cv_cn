@@ -1,0 +1,142 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+% (c) 2012 Scott Clark <sc932@cornell.edu> cam.cornell.edu/~sc932
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+% (c) 2014 Qiang You <qyou@nlpr.ia.ac.cn> 
+
+\documentclass[11pt]{article}
+\usepackage[BoldFont,SlantFont,CJKsetspaces,CJKchecksingle]{xeCJK}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\setCJKmonofont{SimSun}% 设置缺省中文字体
+\parindent 2em   %段首缩进
+
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+
+
+\newlength{\outerbordwidth}
+
+
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		#3 & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\ressubhead}[2]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		#1 & \textit{#2} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large 游~~强} &\textbf{生~日}:~1987年5月27日 \\
+-------------------------------------------------------------------------------------------- &\textbf{邮~件}: qyou@nlpr.ia.ac.cn \\
+北京市海淀区中关村东路95号智能化大厦15层39号 &\textbf{手~机}: +86 1581 0197 480 \\
+\end{tabular*}
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{教育背景}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item \ressubheading{中国科学院自动化研究所模式识别国家重点实验室}{中国, 北京}{计算机应用技术博士研究生在读}{2009年9月 - 至今}
+
+\item \ressubheading{北京航空航天大学自动化学院}{中国,北京}{自动控制与信息技术工学学士}{2005年9月 - 2009年7月}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{项目经历}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+ \item \ressubhead{课题组内部信息交流wiki系统，使用PHP+WikiMedia+MathJax搭建}{2010.9 - 至今}
+ \item \ressubhead{供课题组上传与标注图像的平台， 主要使用Python Flask + MongoDB创建}{2014年7月 - 至今}
+ \item \ressubhead{一个工业试剂测试结果填写与报表实现，使用Windows下MFC开发}{2012年7月- 10月}
+ \item \ressubhead{图购(ToGo),一个手机端图像的搜索与购物软件设计，原型使用OpenCV实现}{2011年10月}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{专业技能}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+\item 具备计算机应用科学相关领域宽广的知识储备，研究重点主要为 网络海量信息的搜索、获取与挖掘，社交网络关系与影响建模，机器学习与推荐系统等
+\item 具备扎实的数据结构与相关领域的算法基础，编程能力强
+ \begin{itemize}
+   \item C/Python, 熟练掌握
+   \item C++/Java/Javascript/PHP, 掌握并能熟练运用于项目中
+   \item 熟悉Matlab, R, Perl, Golang等语言
+ \end{itemize}
+ \item 熟练掌握 MySQL数据库，并会使用 SQL Server, Oracle数据库，对NoSQL数据库如MongoDB, Redis可熟练使用.
+ \item 熟悉版本管理工具, 如 SVN, Git等
+ \item 熟练运用Windows, Mac OS X以及Linux系统
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{其他技能}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+ \item 具备良好的英语读写能力，听力以及口语能力尚可 (CET-6)
+ \item 熟悉Latex, Org-mode, Office等办公系统.
+ \item 能简单使用Windows Project管理与组织项目
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{奖励与荣誉}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-2pt}
+	\begin{center}\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
+		\multicolumn{2}{c}{中科院大学三好学生荣誉称号 \cftdotfill{\cftdotsep} 2013}\\
+        \multicolumn{2}{c}{数学建模大赛, 三等奖 \cftdotfill{\cftdotsep} 2012}\\
+        \multicolumn{2}{c}{中自嘉恒图像设计大赛, 优胜设计 \cftdotfill{\cftdotsep} 2010}\\
+        \multicolumn{2}{c}{北京航空航天大学自动化学院优秀毕业生荣誉称号 \cftdotfill{\cftdotsep} 2009}\\
+        \multicolumn{2}{c}{北航第18届“冯如杯“电子与系统设计大赛, 三等奖 \cftdotfill{\cftdotsep} 2008}\\
+        \multicolumn{2}{c}{全国电子设计大赛北京赛区, 三等奖 \cftdotfill{\cftdotsep} 2007}\\
+		\vphantom{E}
+\end{tabular*}
+\end{center}\vspace*{-16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{发表文章}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\end{document} 
