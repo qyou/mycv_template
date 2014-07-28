@@ -1,0 +1,141 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+% (c) 2012 Scott Clark <sc932@cornell.edu> cam.cornell.edu/~sc932
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large You Qiang} &\textbf{Birthday}: May 27th, 1987 \\
+-------------------------------------------------------------------------------------------- &\textbf{Email}: qyou@nlpr.ia.ac.cn \\
+Zhongguancun East Rd. 95, Haidian District, Beijing, China 100190 &\textbf{Celluar}: +86 15810197480 \\
+\end{tabular*}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item \ressubheading{National Laboratory of Pattern Recognition, Institute of Automation}{Beijing, China}{PhD Candidate of Applied Computer Technologies}{2009 - Present}
+
+%\begin{itemize}
+%	\resitem{Additional description nr 1}
+%	\resitem{Additional description nr 2}
+%\end{itemize}
+
+\item \ressubheading{School of Automation Science and Electric Engineering, BUAA}{Beijing, China}{BSc of Automation and Information Technology}{2005 - 2009}
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Projects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+ \item Wiki system for inner group discussions in our research group, 2010 - Present
+ \item Image labeling web for inner research group, developed mainly in Python and Javascript, 2014
+ \item ToGo (shopping by photos), shopping assistant software according to the photos by cell phone, 2011
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Professional Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+ \item Extensive knowledge of software engineering, algorithms, large-scale web information processing, cloud computing and recommender systems, machine learning, etc
+ \item Proficient programming skills in C/C++, Java, Python, Javascript, PHP, Golang, R, etc
+ \item Proficient database management skills in MySQL, SQL Server, Oracle and NoSQL databases.
+ \item Quite familiar with subversion control, such as SVN, Git
+ \item Familiar with Mac OS and many different kinds of Linux distro such as Ubuntu, CentOS, etc.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Other Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+ \item Quite good at reading and writing in English (CET-6)
+ \item Quite familiar with Latex, Org-mode, Office and other document management systems.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards, Grants \& Honours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-2pt}
+	\begin{center}\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
+		\multicolumn{2}{c}{Merit student of University of Chinese Academy of Sciences \cftdotfill{\cftdotsep} 2013}\\
+        \multicolumn{2}{c}{Mathematical contest in modeling, third prize \cftdotfill{\cftdotsep} 2012}\\
+        \multicolumn{2}{c}{Design contest of image processing by Beijing Join Hope Image Technology Ltd, successful design\cftdotfill{\cftdotsep} 2010}\\
+        \multicolumn{2}{c}{Excellent graduate of School of Automation Science and Electric Engineering in BUAA \cftdotfill{\cftdotsep} 2009}\\
+        \multicolumn{2}{c}{The 18th Feng Ru Cup: Contest of science and technology in BUAA, third prize \cftdotfill{\cftdotsep} 2008}\\
+		\vphantom{E}
+\end{tabular*}
+\end{center}\vspace*{-16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\resheading{Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+%
+\end{document}
